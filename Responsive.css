@@ -1,0 +1,130 @@
+@media (max-width: 1140px) {
+  .best_crypto .cards_wrapper .card {
+    padding: 40px;
+  }
+  .best_crypto .row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero_wrapper .row {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  header .nav_list {
+    padding-left: 0px;
+  }
+
+  .best_crypto::before {
+    top: 100px;
+  }
+  .footer_wrapper .row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+  .footer_wrapper .row .col:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+    width: 100%;
+  }
+
+  .hero_wrapper .row {
+    grid-template-columns: 1fr;
+  }
+  .img_wrapper .images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .best_crypto .cards_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .best_crypto .row {
+    grid-template-columns: 1fr;
+  }
+  .best_crypto .row_1 .right_content {
+    padding-left: calc(20px + 3.5vw);
+  }
+
+  header .container {
+    position: relative;
+  }
+
+  header .nav_list {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(50px);
+    top: 100px;
+    padding-left: 0;
+    padding: 50px 20px;
+    background-color: #383f3e;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s linear;
+    border-radius: 12px;
+  }
+  header .nav_list.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  header .nav_list ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu_close,
+  .menu_toggler {
+    display: block;
+  }
+
+  header .cta_wrapper {
+    display: none;
+  }
+  header .nav_list .cta_wrapper {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .menu_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .best_crypto .row_1 h2 {
+    padding-right: 0;
+  }
+
+  .newsletter::before {
+    top: -20%;
+    background-size: 80%;
+    height: 120%;
+  }
+}
+
+@media (max-width: 575px) {
+  .img_wrapper .images {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .best_crypto .cards_wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .newsletter form .input_group input {
+    padding: 0;
+    padding-right: 5px;
+  }
+  .newsletter form .input_group .btn {
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 10px;
+  }
+  .footer_wrapper .row {
+    grid-template-columns: 1fr !important;
+  }
+  .footer_wrapper .row .col:nth-child(5) {
+    grid-column: span 1;
+  }
+}
